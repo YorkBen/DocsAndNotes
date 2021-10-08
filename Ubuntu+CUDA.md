@@ -1,8 +1,8 @@
 ## Ubuntu Server 20.04 + Anaconda3 + CUDA11.2 + CUDNN8.1 + Tensorflow GPU 2.6.0
 
 ## Ubuntu Server 20.04 Installation
-1. sudo apt upgrade
-2. sudo apt update
+1. sudo apt update
+2. sudo apt upgrade
 
 
 ## NVIDIA + CUDA + CUDNN
