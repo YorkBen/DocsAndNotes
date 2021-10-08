@@ -6,19 +6,18 @@
 
 
 ## NVIDIA + CUDA + CUDNN
-#### 安装NVIDIA
-1. https://www.nvidia.com/Download/index.aspx?lang=en-us 下载对应的安装包
-2. sudo apt install gcc
-3. sudo apt install cmake
-4. sudo bash NVIDIA-Linux-x86_64-460.73.01.run
 #### 屏蔽Ubuntu 显卡驱动
-6. sudo vim /etc/modprobe.d/blacklist-nouveau.conf，添加：  
+1. sudo vim /etc/modprobe.d/blacklist-nouveau.conf，添加：  
 - blacklist nouveau
 - options nouveau modeset=0
-8. sudo update-initramfs -u
-9. sudo reboot
+2. sudo update-initramfs -u
+3. sudo reboot
+#### 安装NVIDIA
+4. https://www.nvidia.com/Download/index.aspx?lang=en-us 下载对应的安装包
+5. sudo apt install gcc g++ cmake
+6. sudo bash NVIDIA-Linux-x86_64-460.73.01.run
 #### 测试NVIDIA安装成功
-9. nvidia-smi
+7. nvidia-smi
 #### 安装CUDA
 11. https://developer.nvidia.com/cuda-toolkit-archive 下载对应的安装包
 12. sudo bash ./cuda_11.2.1_460.32.03_linux.run
