@@ -1,10 +1,29 @@
 ## Ubuntu Server 20.04 + Anaconda3 + CUDA11.2 + CUDNN8.1 + Tensorflow GPU 2.6.0
 
 ### Ubuntu Server 20.04 Installation
-### sudo apt upgrade
-### sudo apt update
+1. sudo apt upgrade
+2. sudo apt update
 
-### Anaconda3 Virtual Enviroment Installation 
+
+### - NVIDIA + CUDA + CUDNN
+#### 安装NVIDIA
+1. https://www.nvidia.com/Download/index.aspx?lang=en-us 下载对应的安装包
+2. sudo apt install gcc
+3. sudo apt install cmake
+4. sudo bash NVIDIA-Linux-x86_64-460.73.01.run
+#### 屏蔽Ubuntu 显卡驱动
+6. sudo vim /etc/modprobe.d/blacklist-nouveau.conf，添加：  
+- blacklist nouveau
+- options nouveau modeset=0
+8. sudo update-initramfs -u
+9. sudo reboot
+#### 测试NVIDIA安装成功
+9. nvidia-smi
+#### 安装CUDA
+11. https://developer.nvidia.com/cuda-toolkit-archive 下载对应的安装包
+12. 
+
+### - Anaconda3 Virtual Enviroment Installation 
 #### Anaconda3（python3.7）
 1. sudo bash Anaconda3-2021.05-Linux-x86_64.sh
 2. vim ~/.bashrc
@@ -19,16 +38,3 @@
 10. import tensorflow as tf
 11. tf.config.list_physical_devices('GPU')
 
-### NVIDIA + CUDA + CUDNN
-#### 安装NVIDIA
-1. https://www.nvidia.com/Download/index.aspx?lang=en-us 下载对应的安装包
-2. sudo apt install gcc
-3. sudo apt install cmake
-4. sudo bash NVIDIA-Linux-x86_64-460.73.01.run
-#### 屏蔽Ubuntu 显卡驱动
-6. sudo vim /etc/modprobe.d/blacklist-nouveau.conf
-  添加：
-  blacklist nouveau
-  options nouveau modeset=0
-7. sudo update-initramfs -u
-8. sudo reboot
