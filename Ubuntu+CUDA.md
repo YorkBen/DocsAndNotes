@@ -1,11 +1,11 @@
-## Ubuntu Server 20.04 + Anaconda3 + CUDA11.2 + CUDNN8.1 + Tensorflow GPU 2.6.0
+# Ubuntu Server 20.04 + Anaconda3 + CUDA11.2 + CUDNN8.1 + Tensorflow GPU 2.6.0
 
-### Ubuntu Server 20.04 Installation
+## Ubuntu Server 20.04 Installation
 1. sudo apt upgrade
 2. sudo apt update
 
 
-### - NVIDIA + CUDA + CUDNN
+## NVIDIA + CUDA + CUDNN
 #### 安装NVIDIA
 1. https://www.nvidia.com/Download/index.aspx?lang=en-us 下载对应的安装包
 2. sudo apt install gcc
@@ -21,9 +21,20 @@
 9. nvidia-smi
 #### 安装CUDA
 11. https://developer.nvidia.com/cuda-toolkit-archive 下载对应的安装包
-12. 
+12. sudo bash ./cuda_11.2.1_460.32.03_linux.run
+13. vim ~/.bashrc，加入
+- export CUDA_HOME=/usr/local/cuda
+- export PATH=$CUDA_HOME/bin/:$PATH
+- export LD_LIBRARY_PATH=$CUDA_HOME/lib64/:$LD_LIBRARY_PATH
+#### CUDA测试
+14. nvcc -V
+15. cd ~/NVIDIA_CUDA-11.2_Samples
+16. make
+17. cd bin/x86_64/linux/release
+18. ./deviceQuery
+#### CUDNN安装
 
-### - Anaconda3 Virtual Enviroment Installation 
+## Anaconda3 Virtual Enviroment Installation 
 #### Anaconda3（python3.7）
 1. sudo bash Anaconda3-2021.05-Linux-x86_64.sh
 2. vim ~/.bashrc
