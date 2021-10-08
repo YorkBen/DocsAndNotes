@@ -1,19 +1,34 @@
-# Ubuntu Server 20.04 + Anaconda3 + CUDA11.2 + CUDNN8.1 + Tensorflow GPU 2.6.0
+## Ubuntu Server 20.04 + Anaconda3 + CUDA11.2 + CUDNN8.1 + Tensorflow GPU 2.6.0
 
-## Ubuntu Server 20.04 Installation
+### Ubuntu Server 20.04 Installation
 ### sudo apt upgrade
 ### sudo apt update
 
-## Anaconda3 Virtual Enviroment Installation
-### 
-### sudo bash Anaconda3-2021.05-Linux-x86_64.sh
-### vim ~/.bashrc
-### export PATH=$PATH:/usr/local/anaconda3/bin/
-### conda create -n tensorflow python=3.7
-### conda activate tensorflow
-### pip3 install tensorflow_gpu-2.6.0-cp37-cp37m-manylinux2010_x86_64.whl
+### Anaconda3 Virtual Enviroment Installation 
+#### Anaconda3（python3.7）
+1. sudo bash Anaconda3-2021.05-Linux-x86_64.sh
+2. vim ~/.bashrc
+3. export PATH=$PATH:/usr/local/anaconda3/bin/
+4. conda create -n tensorflow python=3.7
+5. conda activate tensorflow
 
-## NVIDIA安装
-### sudo apt install gcc
-### sudo apt install cmake
-### sudo bash NVIDIA-Linux-x86_64-460.73.01.run
+#### tensorflow-gpu-2.6.0-cp37 安装和测试
+7. wget https://files.pythonhosted.org/packages/3a/d1/10b080c1925cf8f25775e90860d85fd758ab8404fdb546f88169acffb693/tensorflow_gpu-2.6.0-cp37-cp37m-manylinux2010_x86_64.whl ./
+8. pip3 install tensorflow_gpu-2.6.0-cp37-cp37m-manylinux2010_x86_64.whl
+9. python
+10. import tensorflow as tf
+11. tf.config.list_physical_devices('GPU')
+
+### NVIDIA + CUDA + CUDNN
+#### 安装NVIDIA
+1. https://www.nvidia.com/Download/index.aspx?lang=en-us 下载对应的安装包
+2. sudo apt install gcc
+3. sudo apt install cmake
+4. sudo bash NVIDIA-Linux-x86_64-460.73.01.run
+#### 屏蔽Ubuntu 显卡驱动
+6. sudo vim /etc/modprobe.d/blacklist-nouveau.conf
+  添加：
+  blacklist nouveau
+  options nouveau modeset=0
+7. sudo update-initramfs -u
+8. sudo reboot
