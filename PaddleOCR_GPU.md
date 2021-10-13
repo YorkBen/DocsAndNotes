@@ -15,4 +15,3 @@ https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.
 7. git clone https://github.com/PaddlePaddle/PaddleOCR
 8. cd PaddleOCR
 9. pip3 install -r requirements.txt
-
