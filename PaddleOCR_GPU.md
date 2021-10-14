@@ -18,3 +18,8 @@ https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.
 
 ## Paddle Serving
 1. 参考https://github.com/PaddlePaddle/Serving/blob/develop/README_CN.md
+
+## 问题记录
+paddle serving默认的docker环境ulimit -l量太小，当运行多次ocr pipeline预测任务时，会报错。解决办法为修改ulitmi -l。
+1. ulimit -a 查看ulimit帮助文档
+2. docker设置ulimit： https://mtyurt.net/post/docker-how-to-increase-number-of-open-files-limit.html
