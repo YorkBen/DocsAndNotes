@@ -13,6 +13,7 @@
 2. sudo update-initramfs -u
 3. sudo reboot
 #### 安装NVIDIA
+4. Ubuntu查看显卡型号：lspci | grep -i nvidia
 4. https://www.nvidia.com/Download/index.aspx?lang=en-us 下载对应的安装包
 5. sudo apt install gcc g++ cmake
 6. sudo bash NVIDIA-Linux-x86_64-460.73.01.run
