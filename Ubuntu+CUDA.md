@@ -40,6 +40,7 @@
 
 ## Anaconda3 Virtual Enviroment Installation 
 #### Anaconda3（python3.7）
+1. https://www.anaconda.com/products/individual#Downloads 官网下载anacoda安装包
 1. sudo bash Anaconda3-2021.05-Linux-x86_64.sh
 2. vim ~/.bashrc
 3. export PATH=$PATH:/usr/local/anaconda3/bin/
