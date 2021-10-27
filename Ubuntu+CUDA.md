@@ -26,6 +26,7 @@
 - export CUDA_HOME=/usr/local/cuda
 - export PATH=$CUDA_HOME/bin/:$PATH
 - export LD_LIBRARY_PATH=$CUDA_HOME/lib64/:$LD_LIBRARY_PATH
+14. source ~/.bashrc
 #### CUDA测试
 14. nvcc -V
 15. cd ~/NVIDIA_CUDA-11.2_Samples
@@ -42,8 +43,8 @@
 #### Anaconda3（python3.7）
 1. https://www.anaconda.com/products/individual#Downloads 官网下载anacoda安装包
 1. sudo bash Anaconda3-2021.05-Linux-x86_64.sh
-2. vim ~/.bashrc
-3. export PATH=$PATH:/usr/local/anaconda3/bin/
+2. vim ~/.bashrc 加入 export PATH=$PATH:/usr/local/anaconda3/bin/
+3. source ~/.bashrc
 4. conda create -n tensorflow python=3.7
 5. conda activate tensorflow
 
