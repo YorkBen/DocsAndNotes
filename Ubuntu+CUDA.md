@@ -55,3 +55,5 @@
 10. import tensorflow as tf
 11. tf.config.list_physical_devices('GPU')
 
+###opencv
+pip install opencv-python
