@@ -57,3 +57,9 @@
 
 ###opencv
 pip install opencv-python
+
+
+## 问题记录
+1. nvidia-smi无法使用，有可能是系统自动升级内核导致，可以关掉系统升级功能，降低内核，参考：1. https://blog.csdn.net/u012114438/article/details/104425573  2. https://www.cnblogs.com/leeqizhi/p/11469309.html
+
+
