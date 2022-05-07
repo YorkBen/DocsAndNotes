@@ -62,4 +62,5 @@ pip install opencv-python
 ## 问题记录
 1. nvidia-smi无法使用，有可能是系统自动升级内核导致，可以关掉系统升级功能，降低内核，参考：1. https://blog.csdn.net/u012114438/article/details/104425573  2. https://www.cnblogs.com/leeqizhi/p/11469309.html
 
-
+2. GPU Linux命令：nvtop, gpustat, nvidia-smi   GPU Windows工具：查看进程管理器，nvidia-smi查看进程，kill可以杀掉进程。
+3. tensorflow可以使用GPU，torch不行。
