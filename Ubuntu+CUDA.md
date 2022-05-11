@@ -55,6 +55,10 @@
 10. import tensorflow as tf
 11. tf.config.list_physical_devices('GPU')
 
+#### pytorch 安装测试
+12. 官网地址：https://pytorch.org/get-started/locally/
+13. 
+
 ###opencv
 pip install opencv-python
 
@@ -64,3 +68,6 @@ pip install opencv-python
 
 2. GPU Linux命令：nvtop, gpustat, nvidia-smi   GPU Windows工具：查看进程管理器，nvidia-smi查看进程，kill可以杀掉进程。
 3. tensorflow可以使用GPU，torch不行。
+4. pytorch运行时出错：NVIDIA GeForce RTX 3060 with CUDA capability sm_86 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70。算力不匹配问题，官网安装命令：pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113 ，运行有问题。后指定cuda版本安装解决：pip3 install torch==1.11.0+cu113 torchvision==0.12.
+0+cu113 torchaudio==0.11.0 -f https://download.pytorch.org/whl/torch_stable.html
