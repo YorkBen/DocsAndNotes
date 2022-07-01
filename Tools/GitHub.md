@@ -41,3 +41,6 @@ git push origin master
     b. git fetch origin
     c. git merge -m "解决与上游版本不一致问题" origin/master
     d. git push origin master
+
+3. Your branch and 'origin/main' have diverged, and have 1 and 1 different commits each, respectively
+参考：https://poanchen.github.io/blog/2020/09/19/what-to-do-when-git-branch-has-diverged
