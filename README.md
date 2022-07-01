@@ -1,4 +1,1 @@
-# Envrioment Setup Operations
-
-1. Ubuntu + NVIDIA + Anaconda3 + Tensorflow
-2. PaddleOCR
+# 个人整理资料和学习笔记
