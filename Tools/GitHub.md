@@ -35,3 +35,9 @@ git push origin master
   又出现问题：Cannot rewrite branches: You have unstaged changes.
     git stash暴力解决。
     然后再执行第一条命令，再push就可以了。
+
+2. 修改了README.md导致提交失败
+    a. 先提交本地版本：git commit -a -m "提交本地版本"
+    b. git fetch origin
+    c. git merge -m "解决与上游版本不一致问题" origin/master
+    d. git push origin master
