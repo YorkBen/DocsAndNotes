@@ -37,7 +37,9 @@
 19. https://developer.nvidia.com/rdp/cudnn-download 下载对应的安装包（需要注册登录）
 20. tar -zxvf cudnn-11.2-linux-x64-v8.1.1.33.tgz
 21. 将解压得到的cuda 文件夹下的内容拷贝到对应的$CUDA_HOME 下即可
-
+#### TensorRT安装
+22. https://developer.nvidia.com/tensorrt-download
+23. 版本对应关系：https://blog.csdn.net/weixin_41540237/article/details/131589929
 
 ## Anaconda3 Virtual Enviroment Installation 
 #### Anaconda3（python3.7）
