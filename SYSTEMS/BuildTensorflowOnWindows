@@ -1,2 +1,2 @@
 1. 下载Bazel：https://github.com/bazelbuild/bazel/tags
-2. 
+2.  tensorflow、gpu、bazel的版本对应关系：https://tensorflow.google.cn/install/source?hl=zh-cn#tested_build_configurations
