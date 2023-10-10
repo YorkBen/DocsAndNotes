@@ -12,3 +12,6 @@
 
 ## 代码示例
 1. 参考本目录下文件：武烟端面-pytorch-onnx-tensorrt.ipynb
+2. 对于转换为tensorrt模型的精度的处理，参考：TensorRT/samples/python/efficientnet/build_engine.py
+3. 实际代码参考目录下Pytorch2TensorRT项目
+
