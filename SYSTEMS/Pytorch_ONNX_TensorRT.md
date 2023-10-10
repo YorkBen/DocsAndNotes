@@ -9,3 +9,6 @@
 
 ## 踩坑记录
 1. 未安装onnx-simplifier时，onnx模型转trt engine，提示错误：报错：Your ONNX model has been generated with INT64 weights, while TensorRT does not natively support INT64. Attempting to cast down to INT32，参考：https://blog.csdn.net/yyc1820252161/article/details/130219902，python -m onnxsim model.onnx model_sim.onnx
+
+## 代码示例
+1. 参考本目录下文件：武烟端面-pytorch-onnx-tensorrt.ipynb
