@@ -13,5 +13,7 @@
 ## 代码示例
 1. 参考本目录下文件：武烟端面-pytorch-onnx-tensorrt.ipynb
 2. 对于转换为tensorrt模型的精度的处理，参考：TensorRT/samples/python/efficientnet/build_engine.py
-3. 实际代码参考目录下Pytorch2TensorRT项目
+3. 实际onnx转tensorrt模型，以及tensorrt python推理代码参考目录下Pytorch2TensorRT项目
+4. tensorrt c++ 推理代码参考目录下TensorRtProject目录项目。
+5. tensorrt对fp16和fp32模型输入统一是float类型，内部自动转换。
 
