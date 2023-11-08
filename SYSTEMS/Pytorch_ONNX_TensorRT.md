@@ -14,4 +14,6 @@
 1. 参考本目录下文件：武烟端面-pytorch-onnx-tensorrt.ipynb
 2. 对于转换为tensorrt模型的精度的处理，参考：TensorRT/samples/python/efficientnet/build_engine.py
 3. 实际代码参考目录下Pytorch2TensorRT项目
+4. 编译动态batch的onnx和trt参考ysw Repository下，python/铝箔多分类训练.ipynb
+5. c++调用trt推理，封装及示例参考ysw Repository下，ImgAlgoTest/MyImgLib/ModelInfer类和ImgAlgoTest/TensorRtInfer项目
 
