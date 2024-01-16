@@ -36,11 +36,18 @@ git push origin master
     git stash暴力解决。
     然后再执行第一条命令，再push就可以了。
 
-2. 修改了README.md导致提交失败
+2. git提交了大文件，无法回撤。
+   因为在push之前已经进行了commit操作，所以可以尝试将文件备份后，再回退到之前的commit版本，push一下，再将备份的文件进行处理，再复制到对应地址，重新add、commit、push，涉及的指令：
+   查看所有提交的版本信息： git reflog
+   版本回退：git reset --hard commit_id
+
+3. 使用git clone时提示需要输入账户密码，但是github目前已经不允许使用密码直接登录，而是要使用personal access token. 参考：https://docs.github.com/en/enterprise-server@3.8/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+
+4. 修改了README.md导致提交失败
     a. 先提交本地版本：git commit -a -m "提交本地版本"
     b. git fetch origin
     c. git merge -m "解决与上游版本不一致问题" origin/master
     d. git push origin master
 
-3. Your branch and 'origin/main' have diverged, and have 1 and 1 different commits each, respectively
+5. Your branch and 'origin/main' have diverged, and have 1 and 1 different commits each, respectively
 参考：https://poanchen.github.io/blog/2020/09/19/what-to-do-when-git-branch-has-diverged
